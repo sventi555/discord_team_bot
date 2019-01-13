@@ -2,7 +2,6 @@ const discord = require('discord.js');
 const client = new discord.Client();
 const fs = require('fs');
 
-
 const token = fs.readFileSync('./token', {encoding: 'utf8'});
 const ERROR_MSG = 'Please follow the given format: "&teams #teams name name..."';
 
@@ -55,4 +54,4 @@ client.on('message', message => {
     }
 });
 
-client.login(token);
+client.login(token).catch(console.error);
