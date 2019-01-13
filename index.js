@@ -54,4 +54,4 @@ client.on('message', message => {
     }
 });
 
-client.login(token).catch(console.error);
+client.login(token);
