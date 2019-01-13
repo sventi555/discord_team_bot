@@ -48,7 +48,7 @@ client.on('message', message => {
         // drafts and sends the reply
         let reply = "Teams:\n"
         for (let i = 0; i < teams.length; i++) {
-            reply = reply.concat(`team ${i}: `, teams[i].join(', '), '\n');
+            reply = reply.concat(`team ${i + 1}: `, teams[i].join(', '), '\n');
         }
         message.reply(reply);
     }
